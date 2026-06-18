@@ -6,4 +6,4 @@ Primary goal of repo is to build unified YAML schema of linkml-schema.
 
 ## Installation
 
-Run `npm install @oshw/linkml-schema`
+Run `npm install @dof-initiative/linkml-schema`
