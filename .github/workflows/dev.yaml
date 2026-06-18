@@ -41,7 +41,7 @@ jobs:
         run: sudo apt install nodejs && sudo apt install npm
 
       - name: Install LinkML
-        run: pip install linkml==1.10.0
+        run: pip install linkml==1.11.1
 
       - name: Install yq # as per https://github.com/mikefarah/yq#plain-binary
         run: sudo wget https://github.com/mikefarah/yq/releases/download/v4.35.1/yq_linux_amd64 -O /usr/bin/yq && sudo chmod +x /usr/bin/yq
