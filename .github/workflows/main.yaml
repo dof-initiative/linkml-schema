@@ -61,7 +61,7 @@ jobs:
             echo "The tag flag string is: ($TAG_FLAG_STRING)"
             if [[ $GIT_REF_COMMIT == $GIT_MAIN_COMMIT ]]; then
               echo "Publishing $BASENAME to npmjs.org"
-              ./gradlew publishPackage -ptagFlag=\"$TAG_FLAG_STRING\"
+              ./gradlew publishPackage -PtagFlag=\"$TAG_FLAG_STRING\"
             fi
           else
             echo "Building $BASENAME"
