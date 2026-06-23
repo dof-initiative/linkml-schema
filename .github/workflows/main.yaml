@@ -35,6 +35,9 @@ jobs:
       - name: Install nodejs & npm
         run: sudo apt install nodejs && sudo apt install npm
 
+      - name: Update nodejs & npm
+        run: sudo npm install -g npm@11.16.0  
+
       - name: Install LinkML
         run: pip install linkml==1.10.0
 
