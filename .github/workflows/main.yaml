@@ -55,7 +55,7 @@ jobs:
           if [[ $BASENAME =~ $SEMVER_REGEX ]]; then
           TAG_FLAG_STRING=""
             if [[ $BASENAME =~ $SEMVER_PRERELEASE_REGEX ]]; then
-              TAG_FLAG_STRING="\" --tag ${BASH_REMATCH[0]}\""
+              TAG_FLAG_STRING="${BASH_REMATCH[0]}"
               echo "The tag flag string is: ($TAG_FLAG_STRING)"
             fi
             echo "The tag flag string is: ($TAG_FLAG_STRING)"
