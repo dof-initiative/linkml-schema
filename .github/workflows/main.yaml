@@ -55,13 +55,13 @@ jobs:
           if [[ $BASENAME =~ $SEMVER_REGEX ]]; then
           TAG_FLAG_STRING=""
             if [[ $BASENAME =~ $SEMVER_PRERELEASE_REGEX ]]; then
-              TAG_FLAG_STRING=" --tag ${BASH_REMATCH[0]}"
+              TAG_FLAG_STRING="\" --tag ${BASH_REMATCH[0]}\""
               echo "The tag flag string is: ($TAG_FLAG_STRING)"
             fi
             echo "The tag flag string is: ($TAG_FLAG_STRING)"
             if [[ $GIT_REF_COMMIT == $GIT_MAIN_COMMIT ]]; then
               echo "Publishing $BASENAME to npmjs.org"
-              ./gradlew publishPackage -PtagFlag=\"$TAG_FLAG_STRING\"
+              ./gradlew publishPackage -PtagFlag=$TAG_FLAG_STRING
             fi
           else
             echo "Building $BASENAME"
