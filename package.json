@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mdof-initiative/linkml-schema.git"
+    "url": "git+https://github.com/dof-initiative/linkml-schema.git"
   },
   "keywords": [
     "linkml-schema",
