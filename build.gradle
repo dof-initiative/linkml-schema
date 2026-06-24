@@ -50,4 +50,8 @@ tasks.register('publishPackage', Exec) {
     dependsOn(build, copyPackageFiles)
     workingDir(layout.buildDirectory)
     commandLine "npm", "publish", "--access", "public", "$tagFlag"?"--tag":"", "$tagFlag"?"$tagFlag":""
+
+    doFirst {
+        println "Executing command: ${getCommandLine().join(' ')}"
+    }
 }
